@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app='chatusb' >
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>	</title>
+	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href='css/estilos_chat_usb.css' rel='stylesheet' type='text/css' />
+
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+	<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js'></script>
+	<script src="js/chatAngular.js"></script>
+</head>
+<body>
+	<section>
+		<div id='browser-window' ng-controller='chatAngularController'>
+			<div id='viewport'>
+				<div id='viewport-content'>
+					<div class='bubble-container' ng-repeat='m in mensajes'>
+						<div>{{m.nombre}}</div>
+						<div class='bubble bubble-right'>{{m.texto}}</div>
+					</div>
+				</div>		
+			</div>
+			<form novalidate class='row row-chat' >
+			 <div class='input-group'>  	
+	  			<input type='text' ng-model='mensaje' placeholder='Mensaje' class='form-control'>	
+
+	  			<span class='input-group-btn'>	
+	  				<input type='submit' id='btnEnviar' value="Enviar" 
+	  						ng-click='enviar()' class='btn btn-primary'> 
+	  			</span>
+	 		</div>
+
+	 		<div class='input-group'>  	
+	 			<span class='input-group-btn'>	
+					<input type='submit' id='btnSalir' value="Salir" 
+	  						ng-click='salir()' class='btn btn-link'> 
+	  			</span>
+	  		</div>
+
+	 		</form>
+	  	
+	  	</div>		
+	</section>
+</body>
+</html>

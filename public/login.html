@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app='accesochat'>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href='css/estilos_chat_usb.css' rel='stylesheet' type='text/css' />
+
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+	<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js'></script>
+    <script src="js/acceso.js"></script>
+</head>
+<body>
+ 	<section>
+ 		<div id="browser-window" ng-controller='accesoChatController'>
+ 			<form>
+			 <div class="input-group">
+				<input type='text' ng-model='email' placeholder='Email' class='form-control' required>	
+ 				<input type="password" ng-model='password' placeholder="Password" class="form-control" required>
+              </div>                          
+
+			  <div class="input-group">
+				<input type='submit' id='btnEnviar' value="Iniciar sesión" 
+	  						ng-click='iniciar_sesion()' class='btn btn-primary'> 
+
+	  		  </div>
+	  		
+	  		</form>
+ 		</div>
+	</section>
+</body>
+</html>

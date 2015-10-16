@@ -1,0 +1,42 @@
+body
+{
+	font-family: 'Open Sans', Arial, sans-serif;
+	font-weight: 300;
+	font-size: 14px;
+}
+
+#browser-window{
+	background: url("../img/background.png") ;
+	height: 538px;
+	width: 335px;
+	padding: 49px 25px 10px 25px;
+	margin: auto;
+	position:relative;
+}
+
+#viewport{
+	overflow-x:scroll;
+	height: 420px;
+}
+
+#viewport-content{
+	position: relative;
+	bottom: -10px;
+}
+
+.row-chat{
+	position:absolute;
+	bottom: 20px;
+	margin: 0;
+	width: 286px;
+}
+
+.bubble{
+	padding: 10px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	background: rgba(255, 255, 255, 0.6);
+	color: #575858;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
